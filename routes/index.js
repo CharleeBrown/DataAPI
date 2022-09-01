@@ -14,10 +14,10 @@ router.get('/', function(req, res,next){
 })
 /* GET home page. */
 router.post('/', function(req, res, next) {
-
+  let newObj = {"name":req.body['name']}
+  console.log(newObj);
     client.connect((err) => 
     {
-      let newObj = {"name":req.body['name']}
       collect.insertOne(newObj);
     });    
 
