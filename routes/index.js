@@ -20,6 +20,8 @@ router.post('/', function(req, res, next) {
     });    
 });
 
-
+router.get('/', function(req, res,next){
+  res.send('index.js');
+})
 
 module.exports = router;
