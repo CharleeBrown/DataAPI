@@ -14,12 +14,12 @@ router.get('/', function(req, res,next){
 })
 /* GET home page. */
 router.post('/', function(req, res, next) {
-  
+  //console.log(req.body);
   //let newObj = {}
   //console.log(newObj);
-    client.connect((err) => 
-    {
-      collect.insertOne(req.body.name[names]);
+     client.connect((err) => 
+     {
+      collect.insertOne(req.body);
     });    
 
   
