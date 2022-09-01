@@ -21,7 +21,7 @@ router.post('/', function(req, res, next) {
       collect.insertOne(newObj);
     });    
     client.close();
-    res.send("completed");
+  
 });
 
 
