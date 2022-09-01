@@ -17,7 +17,7 @@ router.post('/', function(req, res, next) {
 
     client.connect((err) => 
     {
-      let newObj = {"name":req.body.value}
+      let newObj = {"name":req.body['name']}
       collect.insertOne(newObj);
     });    
 
