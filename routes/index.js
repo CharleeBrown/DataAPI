@@ -15,9 +15,10 @@ router.post('/', function(req, res, next) {
 
     client.connect(async (err) => 
     {
-      let newObj = {"name":req.body.name}
+      let newObj = {"name":req.body.value}
       collect.insertOne(newObj);
     });    
+    client.close();
 });
 
 router.get('/', function(req, res,next){
