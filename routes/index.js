@@ -13,7 +13,7 @@ router.get('/', function(req, res,next){
   res.send('index');
 })
 /* GET home page. */
-router.put('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
   
   //let newObj = {}
   console.log(newObj);
