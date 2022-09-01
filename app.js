@@ -25,12 +25,6 @@ app.use(function(req, res, next) {
   next();
 })
 app.use('/', indexRouter);
-app.options('/', function (req, res){
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader('Access-Control-Allow-Methods', '*');
-  res.setHeader("Access-Control-Allow-Headers", "*");
-  res.end();
-});
 //app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
