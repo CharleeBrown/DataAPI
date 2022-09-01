@@ -13,12 +13,13 @@ const collect = client.db("mainDB").collection("CalLabBooking");
 /* GET home page. */
 router.post('/', function(req, res, next) {
 
-    client.connect(async (err) => 
+    client.connect((err) => 
     {
       let newObj = {"name":req.body.value}
       collect.insertOne(newObj);
     });    
     client.close();
+    res.send("completed");
 });
 
 router.get('/', function(req, res,next){
