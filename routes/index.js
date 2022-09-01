@@ -9,7 +9,9 @@ const client = new MongoClient(uri, {
 });
 const collect = client.db("mainDB").collection("CalLabBooking");
 
-
+router.get('/', function(req, res,next){
+  res.send('index');
+})
 /* GET home page. */
 router.post('/', function(req, res, next) {
 
@@ -22,8 +24,6 @@ router.post('/', function(req, res, next) {
     res.send("completed");
 });
 
-router.get('/', function(req, res,next){
-  res.send('index.js');
-})
+
 
 module.exports = router;
